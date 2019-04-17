@@ -7,7 +7,6 @@ class Monitoring
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   CHECK_INTERVALS = %w(3 10 50 100 500)
-  # CHECK_INTERVALS = %w(1 2 3)
 
   def initialize(*args)
     raise ArgumentError, "Incorrect arguments #{args.inspect}" if args.size < 2
@@ -31,7 +30,7 @@ class Monitoring
           response = Net::HTTP.get_response(uri)
           if response.code == "200"
             status = 1
-            thread.exit 
+            thread.exit
           end
           notify(interval)
           sleep(interval.to_i * 60)
