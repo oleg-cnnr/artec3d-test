@@ -37,7 +37,7 @@ class Monitoring
         end
       end
       thread.join
-    rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, Errno::EHOSTUNREACH, EOFError,
+    rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, Errno::EHOSTUNREACH, EOFError, Errno::ECONNREFUSED,
            Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError, Net::ProtocolError, Net::ReadTimeout => e
       puts e.inspect
     else

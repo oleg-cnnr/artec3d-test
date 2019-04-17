@@ -6,7 +6,7 @@ Simple ruby scirpt for checking HTTP response of passed url.
 Just run it with: 
 
 ```sh
-$ git clone https://github.com/oleg-cnnr/artec3d-test.git .
+$ git clone https://github.com/oleg-cnnr/artec3d-test.git
 $ cd artec3d-test
 $ ruby monitoring.rb URL EMAIL|PHONE
 ```
