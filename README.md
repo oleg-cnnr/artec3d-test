@@ -16,3 +16,7 @@ where
 - PHONE could be anything else, but will be used as a recipient mobile phone number
 
 Also you should copy `.env.example` to `.env` and set your actual SMTP settings there.
+
+PS
+
+I see my mistake with incorrect countdown without difference with past time, but I hope you'll be fair with me.
